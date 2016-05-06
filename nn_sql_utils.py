@@ -4,7 +4,7 @@ from datetime import date
 
 
 # we store a song for each user creation OR neural network output
-def record_song(name, when, creator, generation, score):
+def sql_record_song(name, when, creator, generation, score):
 	cnx = mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
                               database='snr16_test')
@@ -23,7 +23,7 @@ def record_song(name, when, creator, generation, score):
 
 
 # only users score a song HIT<=>SHIT
-def record_score(when, song_id, score, user):
+def sql_record_score(when, song_id, score, user):
 	cnx = mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
                               database='snr16_test')
@@ -41,7 +41,7 @@ def record_score(when, song_id, score, user):
 
 
 # we store information about each NN after training
-def record_nn(network, when, file_hd5):
+def sql_record_nn(network, when, file_hd5):
 	cnx = mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
                               database='snr16_test')
@@ -59,7 +59,7 @@ def record_nn(network, when, file_hd5):
 
 
 # for each instance of the NN, we keep the songs on the training set
-def record_training(network, songs):	
+def sql_record_training(network, songs):	
 	cnx = mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
                               database='snr16_test')
@@ -78,5 +78,5 @@ def record_training(network, songs):
 
 
 
-record_song('df2',date(2016,05,02),001,0,0)
+sql_record_song('df2',date(2016,05,02),001,0,0)
 
