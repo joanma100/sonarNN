@@ -96,8 +96,9 @@ def save_training(network_id, songs):
 	cnx = sql_connect()
 	cursor = cnx.cursor()
 
-	for song in songs:
-		add_training = "INSERT INTO training (network_id, time, song_id) VALUES ('%s', now(), '%s')" % (network_id, song)
+	for song_id in songs:
+		add_training = "INSERT INTO training (network_id, time, song_id) VALUES ('%s', now(), '%s')" % (network_id, song_id)
+		print add_training
 		cursor.execute(add_training)
 
 	cnx.commit()
