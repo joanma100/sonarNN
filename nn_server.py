@@ -29,6 +29,13 @@ def get_song_collection(song_folder):
 	return os.listdir(song_folder)
 
 
+
+# select subset of song to train each NN
+def get_training_set(folder, code):
+	song_folder = os.getenv("HOME")+'/data/snr16/musica/dataset1/'
+	return os.listdir(song_folder)
+
+
 # publish media on SN
 def publish(title, song_path):
 	# upload WAV to soundcloud & tweet new song
