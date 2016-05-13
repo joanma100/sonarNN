@@ -9,7 +9,6 @@ def upload_soundcloud(title, song_path, token):
 	    'title': title,
 	    'asset_data': open(song_path, 'rb')
 	})
-	# link twitter account here
 
 
 
