@@ -23,10 +23,18 @@ def store_song(song_id, generation = 0, user=''):
 	sqlutil.save_song(song_id, user, generation, 0)
 
 
+
 # returns a list of wav songs to evaluate by users
 def get_song_collection(song_folder):
 	song_folder = os.getenv("HOME")+'/data/snr16/musica/dataset1/'
 	return os.listdir(song_folder)
+
+
+
+
+#################################################################################
+#################################################################################
+
 
 
 

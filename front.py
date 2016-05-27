@@ -2,6 +2,8 @@ import pygame
 import time
 import readchar
 
+import nn_server
+
 
 def hs(col_music):	
 	freq = 44100    # audio CD quality
@@ -32,3 +34,8 @@ def hs(col_music):
 		print 'next...'
 
 
+
+def compose(path):
+	nn.server
+	
+	
